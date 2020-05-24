@@ -4,7 +4,7 @@
 
 plugins {
   id 'com.tridium.niagara-signing'
-  id 'com.tridium.niagara' apply false
+  id 'com.tridium.niagara'
   id 'com.tridium.niagara-module' apply false
   id 'com.tridium.niagara-rjs' apply false
 }

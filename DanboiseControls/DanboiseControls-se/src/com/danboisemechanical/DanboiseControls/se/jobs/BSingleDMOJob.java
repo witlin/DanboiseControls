@@ -49,8 +49,6 @@ public class BSingleDMOJob extends BSimpleJob {
   private ArrayList<N2PointDef> n2PointList;
   private Logger logger = Logger.getLogger("DMI_SysBuilder_DMOBuilder");
 
-
-
   @Override
   public void run(Context cx) throws Exception {
 
@@ -65,9 +63,7 @@ public class BSingleDMOJob extends BSimpleJob {
       if(e.getType().getTypeName().equals("JciN2Network")){
         BJciN2Network n2 = (BJciN2Network)e;
         BJciDx9100Device dev = new BJciDx9100Device();
-        String name;
-
-        name = n2Dev.getDevName().replaceAll("[^A-Za-z0-9]", "");
+        String name = n2Dev.getDevName().replaceAll("[^A-Za-z0-9]", "");
 
         BJciS91PointDeviceExt devExt = new BJciS91PointDeviceExt();
 
@@ -86,12 +82,7 @@ public class BSingleDMOJob extends BSimpleJob {
           try{
             if(pointType.equals("AI")){
               BJciS91NumericProxyExt proxyExt = new BJciS91NumericProxyExt();
-              BControlPoint ai = null;
-              if(isWritable){
-                ai = new BNumericWritable();
-              }else{
-                ai = new BNumericPoint();
-              }
+              BControlPoint ai = new BNumericPoint();
 
               //SET THE POINT'S PROXY EXTENSION PROPERTIES
               proxyExt.set("networkPointType", BJciN2ObjectType.analogInput);
@@ -157,7 +148,7 @@ public class BSingleDMOJob extends BSimpleJob {
               }else if( pointType.equals("AD")){
                 switch(subType){
                   case "ACO":
-                    proxyExt.set("networkPointType", BJciN2ObjectType.programmableModuleConstant);
+                    proxyExt.set("networkPointType", BJciN2ObjectType.analogDataFloat);
                   case "PMK":
                       proxyExt.set("networkPointType", BJciN2ObjectType.programmableModuleConstant);
                     break;

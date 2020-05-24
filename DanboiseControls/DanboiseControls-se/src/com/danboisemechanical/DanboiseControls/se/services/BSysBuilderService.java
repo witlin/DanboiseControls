@@ -1,9 +1,6 @@
 package com.danboisemechanical.DanboiseControls.se.services;
 
-import com.danboisemechanical.DanboiseControls.se.builders.BAlarmBuilder;
-import com.danboisemechanical.DanboiseControls.se.builders.BDMOBuilder;
-import com.danboisemechanical.DanboiseControls.se.builders.BPRNBuilder;
-import com.danboisemechanical.DanboiseControls.se.builders.BTagBuilder;
+import com.danboisemechanical.DanboiseControls.se.builders.*;
 
 import javax.baja.nre.annotations.NiagaraProperty;
 import javax.baja.nre.annotations.NiagaraType;
@@ -25,6 +22,12 @@ import java.util.logging.Logger;
         flags = Flags.SUMMARY
 )
 @NiagaraProperty(
+        name = "DDLBuilder",
+        type = "DanboiseControls:DDLBuilder",
+        defaultValue = "BDDLBuilder.make()",
+        flags = Flags.SUMMARY
+)
+@NiagaraProperty(
         name = "TagBuilder",
         type = "DanboiseControls:TagBuilder",
         defaultValue = "BTagBuilder.make()",
@@ -42,8 +45,8 @@ import java.util.logging.Logger;
 
 public class BSysBuilderService extends BAbstractService {
 /*+ ------------ BEGIN BAJA AUTO GENERATED CODE ------------ +*/
-/*@ $com.danboisemechanical.DanboiseControls.se.services.BSysBuilderService(3919483139)1.0$ @*/
-/* Generated Wed Aug 21 13:15:32 EDT 2019 by Slot-o-Matic (c) Tridium, Inc. 2012 */
+/*@ $com.danboisemechanical.DanboiseControls.se.services.BSysBuilderService(12854749)1.0$ @*/
+/* Generated Sun May 24 14:28:50 EDT 2020 by Slot-o-Matic (c) Tridium, Inc. 2012 */
 
 ////////////////////////////////////////////////////////////////
 // Property "PRNBuilder"
@@ -90,6 +93,29 @@ public class BSysBuilderService extends BAbstractService {
    * @see #DMOBuilder
    */
   public void setDMOBuilder(BDMOBuilder v) { set(DMOBuilder, v, null); }
+
+////////////////////////////////////////////////////////////////
+// Property "DDLBuilder"
+////////////////////////////////////////////////////////////////
+  
+  /**
+   * Slot for the {@code DDLBuilder} property.
+   * @see #getDDLBuilder
+   * @see #setDDLBuilder
+   */
+  public static final Property DDLBuilder = newProperty(Flags.SUMMARY, BDDLBuilder.make(), null);
+  
+  /**
+   * Get the {@code DDLBuilder} property.
+   * @see #DDLBuilder
+   */
+  public BDDLBuilder getDDLBuilder() { return (BDDLBuilder)get(DDLBuilder); }
+  
+  /**
+   * Set the {@code DDLBuilder} property.
+   * @see #DDLBuilder
+   */
+  public void setDDLBuilder(BDDLBuilder v) { set(DDLBuilder, v, null); }
 
 ////////////////////////////////////////////////////////////////
 // Property "TagBuilder"

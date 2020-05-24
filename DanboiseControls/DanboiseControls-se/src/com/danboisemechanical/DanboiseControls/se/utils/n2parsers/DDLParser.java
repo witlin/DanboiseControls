@@ -1,7 +1,7 @@
 package com.danboisemechanical.DanboiseControls.se.utils.n2parsers;
 
-import com.danboisemechanical.DanboiseControls.se.builders.BDMOBuilder;
-import com.danboisemechanical.DanboiseControls.se.jobs.BSingleDMOJob;
+import com.danboisemechanical.DanboiseControls.se.builders.BDDLBuilder;
+import com.danboisemechanical.DanboiseControls.se.jobs.BSingleDDLJob;
 import com.danboisemechanical.DanboiseControls.se.models.n2.N2DevDef;
 import com.danboisemechanical.DanboiseControls.se.models.n2.N2PointDef;
 
@@ -15,9 +15,9 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.logging.Logger;
 
-public class DMOParser extends PRNParser {
+public class DDLParser extends PRNParser {
 
-    public N2DevDef parseN2Dev(BOrd fileOrd, BDMOBuilder caller, BSingleDMOJob job){
+    public N2DevDef parseN2Dev(BOrd fileOrd, BDDLBuilder caller, BSingleDDLJob job){
 
         String devName = "";
         try{
@@ -47,7 +47,7 @@ public class DMOParser extends PRNParser {
         return N2DevDef.make("", devName);
     }
 
-    public ArrayList<N2PointDef> parseN2Point(BOrd fileOrd, BDMOBuilder caller, BSingleDMOJob job){
+    public ArrayList<N2PointDef> parseN2Point(BOrd fileOrd, BDDLBuilder caller, BSingleDDLJob job){
 
         ArrayList<N2PointDef>  points = new ArrayList();
 
@@ -60,11 +60,27 @@ public class DMOParser extends PRNParser {
                 String line;
                 while((line = bin.readLine()) != null){
 
-//                    * LONGNAME "SWITCH ROOM ZN1-T"
-//                    CSAI "AI3",N,N,"OA_TT","Deg F"
-//                    CSBI "DI1",N,N,"FIRE_ALM","OFF","ON"
-//                    CSAO "OUT1",N,N,"AO1","%"
-//                    CSBO "DO3",N,N,"BMS_CMD","OFF","ON"
+/*
+                    * LONGNAME "SWITCH ROOM ZN1-T"
+                    CSAI "AI3",N,N,"OA_TT","Deg F"
+                    CSBI "DI1",N,N,"FIRE_ALM","OFF","ON"
+                    CSAO "OUT1",N,N,"AO1","%"
+                    CSBO "DO3",N,N,"BMS_CMD","OFF","ON"
+                    CSBD "PM3DO1",N,N,"ZN1ONDLY","OFF","ON"
+                    CSBD "PM3CT1",N,N,"PM3HLD1","OFF","ON"
+                    CSBD "LRS1",N,N,"AC1-ENAB","OFF","ON"
+                    CSAD "PM2K1",N,N,"PM2K1-1",""
+                    CSAD "PM2OU2",N,N,"ZN1-SP2",""
+                    CSBD "P M # SUBTYPE #",N,N,...
+                    Programmable Module Subtypes:
+                        K = Constant
+                        OU = Output
+                        LRS = Logic Result (Binary Data)
+                        CT = Hold Control/Status (Binary Data)
+                        ACO = Analog Constant (translates to an ADF in the Tridium jcin2 module)
+                        S = Logic (not used)
+*/
+
 
                     String pType = "";
                     String subType = "";
@@ -72,7 +88,7 @@ public class DMOParser extends PRNParser {
                     String longName = "";
                     String shortName = "";
                     String units = "";
-                    boolean rw = true;
+                    boolean rw = false;
 
                     try{
                         if(line.contains("LONGNAME")){
@@ -84,7 +100,10 @@ public class DMOParser extends PRNParser {
                                 line.startsWith("CSMODEL")){
                             logger.info("DMO PARSER LINE DISCARDED...!"+" ".concat(line));
 
-                        }else if(line.startsWith("CS") && !line.contains("MODEL") && !line.contains("LONGNAME")){
+                        }else if(line.startsWith("CS")      &&
+                                 !line.contains("MODEL")    &&
+                                 !line.contains("LONGNAME") &&
+                                 !line.contains("N/A") ){
 
                             String[] pointRoot = line.split(" ");
                             StringBuilder _sb = new StringBuilder();
@@ -94,8 +113,28 @@ public class DMOParser extends PRNParser {
                                 sb.append(pointRoot[c]);
                                 c++;
                             }
+
+                            /*
+                            * CSAI "AI1",N,N,"ZN1-TT","Deg F"                  AI 1      ________
+                            * CSBI "DI6",N,N,"EF-STS","OFF","ON"               DI 6      ________
+                            * CSAO "OUT1",N,N,"ZNDMP2-C","%"                   AO 1      ________
+                            * CSBO "DO5",N,N,"DX1-CMD","OFF","ON"              BO 5      ________
+                            *
+                            * **CSAD "PM4OU1",N,N,"10M","Second"               PMO 25    ________
+                            * CSBD "PM4DO1",N,N,"SFMINON","Off","On"           PML 25    ________
+                            * **CSBD "PM4CT1",N,N,"PM4HLD1","Off","On"         N/A       ________
+                            * CSAD "PM7OU1",N,N,"VFD-PID","%"                  PMO 49    ________
+                            * CSAD "PM7OU2",N,N,"PM7WSP",""                    PMO 50    ________
+                            * **CSAD "PM6K1",N,N,"PM6K1-1",""                  PMK 101   ________
+                            * CSAD "ACO1",N,N,"CLGLOCK",""                     ADF 1     ________
+                            * CSBD "LRS1",N,N,"SF-C","Off","On"                LRS 1     ________
+                            *
+                            * 0=[**CSBI "DI8"] , 1=[N] , 2=[N] , 3=["DI8"] , 4=["OFF"] , 5=["ON"]     DI 8      ________
+                            * 0=[**CSAD "PM4OU3"] , 1=[N] , 2=[N] , 3=["SFANFLDT"] , 4=["Second"]     PMO 27    ________
+                            *
+                            * */
+
                             String[] pointProps = (sb.toString()).split(",");
-                            char[] tokens = pointProps[0].toCharArray();
                             sb.delete(0,sb.length());
 
                             if(pointProps[3].startsWith("\"")){
@@ -103,40 +142,12 @@ public class DMOParser extends PRNParser {
                                 shortName = shortName.replace('-', '_');
                             }else{ shortName = pointProps[3]; }
 
-                            if(pointProps.length == 6){
+                            if(pointProps.length == 6) {
                                 String state1, state2;
-
-                                if(pointProps[4].startsWith("\"")){
-                                    state1 = pointProps[4].replaceAll("\"", "");
-                                }else{ state1 = pointProps[4]; }
-
-                                if(pointProps[5].startsWith("\"")){
-                                    state2 = pointProps[5].replaceAll("\"", "");
-                                }else{ state2 = pointProps[5]; }
-                                units = state1+"/"+state2;
-
-                            }else{
-                                if(pointProps[4].startsWith("\"")){
-                                    units = pointProps[4].replaceAll("\"", "");
-                                }else{ units = pointProps[4]; }
-                            }
-
-//                            if((pointProps[1]).equals("N") && (pointProps[2]).equals("N")) rw = false;
-
-                            if((pointProps[0]).contains("PM")){
-                                for(char t : tokens){
-                                    if(Character.isLetter(t)){
-                                        sb.append(t);
-                                    }else if(Character.isDigit(t)){
-                                        _sb.append(t);
-                                    }else{
-                                        logger.warning("DMOParser, type-addr field unknkown token...!"+t);
-                                    }
-                                }
-                                addr = Integer.parseInt(_sb.toString().substring(1));
-                                logger.info("DMOParser...N2 Prog. Module address: "+addr+"\t"+pointProps[0]);
-
-                            }else{
+                                state1 = pointProps[4].replaceAll("\"", "");
+                                String[] array = pointProps[5].split("\"");
+                                state2 = array[1];
+                                char[] tokens = array[2].toCharArray();
                                 for(char t : tokens){
                                     if(Character.isLetter(t)){
                                         sb.append(t);
@@ -148,9 +159,31 @@ public class DMOParser extends PRNParser {
                                 }
                                 addr = Integer.parseInt(_sb.toString());
                                 logger.info("DMOParser...N2 Point address: "+addr);
+
+                                subType = sb.toString();
+                                logger.info("N2 POINT SUB-TYPE: "+subType);
+                                units = state1+"/"+state2;
+
+                            } else {
+                                String[] array1 = pointProps[4].split("\"");
+                                units = array1[1];
+                                char[] tokens = array1[2].toCharArray();
+                                for(char t : tokens){
+                                    if(Character.isLetter(t)){
+                                        sb.append(t);
+                                    }else if(Character.isDigit(t)){
+                                        _sb.append(t);
+                                    }else{
+                                        logger.warning("DMOParser, type-addr field unknkown token...!");
+                                    }
+                                }
+                                addr = Integer.parseInt(_sb.toString());
+                                logger.info("DMOParser...N2 Point address: "+addr);
+
+                                subType = sb.toString();
+                                logger.info("N2 POINT SUB-TYPE: "+subType);
                             }
-                            subType = sb.toString();
-                            logger.info("N2 POINT SUB-TYPE: "+subType);
+
                             _sb.delete(0, _sb.length());
                             sb.delete(0,sb.length());
 
@@ -240,7 +273,6 @@ public class DMOParser extends PRNParser {
                                             units,
                                             rw ));
                                     break;
-/*
 
                                 case "CSBD":
                                     rw = true;
@@ -287,10 +319,9 @@ public class DMOParser extends PRNParser {
                                             rw,
                                             subType));
                                     break;
-*/
 
                                 default:
-                                    logger.warning("DMO PARSER CAN'T IDENTIFY N2 POINT TYPE...!");
+                                    logger.severe("PARSER CAN'T IDENTIFY N2 POINT TYPE...!");
                                     break;
                             }
                         }else{
@@ -312,5 +343,5 @@ public class DMOParser extends PRNParser {
         return points;
     }
 
-    private static Logger logger = Logger.getLogger("DMI_SysBuilder_DMOBuilder");
+    private static Logger logger = Logger.getLogger("DMI_SysBuilder_DDLBuilder");
 }

@@ -7,6 +7,7 @@
   <!--com.danboisemechanical.DanboiseControls.se.jobs-->
   <type class="com.danboisemechanical.DanboiseControls.se.jobs.BSinglePRNJob" name="SinglePRNJob"/>
   <type class="com.danboisemechanical.DanboiseControls.se.jobs.BSingleDMOJob" name="SingleDMOJob"/>
+  <type class="com.danboisemechanical.DanboiseControls.se.jobs.BSingleDDLJob" name="SingleDDLJob"/>
   <!--com.danboisemechanical.DanboiseControls.se.workers-->
   <type class="com.danboisemechanical.DanboiseControls.se.workers.BSysBuilderWorker" name="SysBuilderWorker"/>
   <type class="com.danboisemechanical.DanboiseControls.se.workers.BAlarmBuilderWorker" name="AlarmBuilderWorker"/>
@@ -23,6 +24,7 @@
   <type class="com.danboisemechanical.DanboiseControls.se.builders.BTagBuilder" name="TagBuilder"/>
   <type class="com.danboisemechanical.DanboiseControls.se.builders.BAlarmBuilder" name="AlarmBuilder"/>
   <type class="com.danboisemechanical.DanboiseControls.se.builders.BDMOBuilder" name="DMOBuilder"/>
+  <type class="com.danboisemechanical.DanboiseControls.se.builders.BDDLBuilder" name="DDLBuilder"/>
   <!--com.danboisemechanical.DanboiseControls.se.models.builder_rules-->
   <type class="com.danboisemechanical.DanboiseControls.se.models.builder_rules.BTagRule" name="TagRule"/>
   <type class="com.danboisemechanical.DanboiseControls.se.models.builder_rules.BFilter" name="Filter"/>
