@@ -1,12 +1,17 @@
 /* Module Build File */
 
-description     = "Custom Niagara services and utilities"
+description     = ""
 ext {
 }
 niagaraModule {
   moduleName = "DanboiseControls"
   preferredSymbol = "dc"
   runtimeProfile = "rt"
+
+  modulePart {
+      name = "DanboiseControls-se"
+      runtimeProfile = "se"
+  }
 
   modulePart {
       name = "DanboiseControls-ux"
@@ -17,47 +22,42 @@ niagaraModule {
       name = "DanboiseControls-wb"
       runtimeProfile = "wb"
   }
-
-  modulePart {
-      name = "DanboiseControls-se"
-      runtimeProfile = "se"
-  }
 }
 
 dependencies {
-  compile "Tridium:nre:4.7"
-  compile "Tridium:baja:4.7"
-  compile "Tridium:abstractMqttDriver-rt:1.0"
-  compile "Tridium:alarm-rt:4.7"
-  compile "Tridium:bajaux-rt:4.7"
-  compile "Tridium:box-rt:4.7"
-  compile "Tridium:bql-rt:4.7"
-  compile "Tridium:control-rt:4.7"
-  compile "Tridium:dashboard-rt:4.7"
-  compile "Tridium:driver-rt:4.7"
-  compile "Tridium:email-rt:4.7"
-  compile "Tridium:entityIo-rt:4.7"
-  compile "Tridium:event-rt:4.7"
-  compile "Tridium:file-rt:4.7"
-  compile "Tridium:gx-rt:4.7"
-  compile "Tridium:hierarchy-rt:4.7"
-  compile "Tridium:history-rt:4.7"
-  compile "Tridium:migration-rt:4.7"
-  compile "Tridium:ndriver-rt:4.7"
-  compile "Tridium:neql-rt:4.7"
-  compile "Tridium:net-rt:4.7"
-  compile "Tridium:platSerial-rt:4.7"
-  compile "Tridium:rdb-rt:4.7"
-  compile "Tridium:report-rt:4.7"
-  compile "Tridium:saml-rt:4.7"
-  compile "Tridium:schedule-rt:4.7"
-  compile "Tridium:search-rt:4.7"
-  compile "Tridium:serial-rt:4.7"
-  compile "Tridium:seriesTransform-rt:4.7"
-  compile "Tridium:sms-rt:4.7"
-  compile "Tridium:snmp-rt:4.7"
-  compile "Tridium:tls-rt:4.7"
-  compile "Tridium:web-rt:4.7"
+    compile "Tridium:nre:4.6"
+    compile "Tridium:baja:4.6"
+    compile "Tridium:abstractMqttDriver-rt:1.0"
+    compile "Tridium:alarm-rt:4.6"
+    compile "Tridium:bajaux-rt:4.6"
+    compile "Tridium:box-rt:4.6"
+    compile "Tridium:bql-rt:4.6"
+    compile "Tridium:control-rt:4.6"
+    compile "Tridium:dashboard-rt:4.6"
+    compile "Tridium:driver-rt:4.6"
+    compile "Tridium:email-rt:4.6"
+    compile "Tridium:entityIo-rt:4.6"
+    compile "Tridium:event-rt:4.6"
+    compile "Tridium:file-rt:4.6"
+    compile "Tridium:gx-rt:4.6"
+    compile "Tridium:hierarchy-rt:4.6"
+    compile "Tridium:history-rt:4.6"
+    compile "Tridium:migration-rt:4.6"
+    compile "Tridium:ndriver-rt:4.6"
+    compile "Tridium:neql-rt:4.6"
+    compile "Tridium:net-rt:4.6"
+    compile "Tridium:platSerial-rt:4.6"
+    compile "Tridium:rdb-rt:4.6"
+    compile "Tridium:report-rt:4.6"
+    compile "Tridium:saml-rt:4.6"
+    compile "Tridium:schedule-rt:4.6"
+    compile "Tridium:search-rt:4.6"
+    compile "Tridium:serial-rt:4.6"
+    compile "Tridium:seriesTransform-rt:4.6"
+    compile "Tridium:sms-rt:4.6"
+    compile "Tridium:snmp-rt:4.6"
+    compile "Tridium:tls-rt:4.6"
+    compile "Tridium:web-rt:4.6"
 }
 
 moduleTestJar {

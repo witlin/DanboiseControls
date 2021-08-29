@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="DanboiseControls-se" bajaVersion="0" vendor="VictorSmolinski" vendorVersion="1.0" description="" preferredSymbol="dc" nre="true" autoload="true" installable="true" buildMillis="1630271575603" buildHost="David-PC" moduleName="DanboiseControls" runtimeProfile="se">
+ <dependencies>
+  <dependency name="bajaScript-ux" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="serial-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="history-ux" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="dashboard-wb" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="net-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="control-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="neql-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="email-wb" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="hierarchy-wb" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="file-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="workbench-wb" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="gx-wb" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="search-ux" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="report-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="web-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="driver-wb" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="snmp-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="alarm-wb" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="event-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="schedule-wb" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="html-wb" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="saml-wb" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="migrator-wb" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="report-ux" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="bajaui-wb" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="control-ux" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="email-ux" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="hierarchy-ux" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="abstractMqttDriver-rt" vendor="Tridium" vendorVersion="1.0"/>
+  <dependency name="seriesTransform-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="history-wb" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="sms-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="dashboard-ux" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="bql-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="gx-ux" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="bajaux-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="jcin2" vendor="JohnsonControls" vendorVersion="14.6"/>
+  <dependency name="rdb-wb" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="tls-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="search-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="ndriver-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="mobileThemeZebra-ux" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="search-wb" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="DanboiseControls-ux" vendor="VictorSmolinski" vendorVersion="1.0"/>
+  <dependency name="control-wb" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="driver-ux" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="event-wb" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="migration-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="schedule-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="baja" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="email-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="test-wb" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="platSerial-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="seriesTransform-ux" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="hierarchy-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="report-wb" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="tls-wb" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="mobile-wb" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="dashboard-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="gx-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="webEditors-ux" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="serial-wb" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="alarm-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="box-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="DanboiseControls-rt" vendor="VictorSmolinski" vendorVersion="1.0"/>
+  <dependency name="bql-ux" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="ndriver-wb" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="alarm-se" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="driver-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="pdf-wb" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="schedule-ux" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="bajaux-ux" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="DanboiseControls-wb" vendor="VictorSmolinski" vendorVersion="1.0"/>
+  <dependency name="saml-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="snmp-wb" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="wbutil-wb" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="test-se" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="seriesTransform-wb" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="hx-wb" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="help-wb" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="sms-wb" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="abstractMqttDriver-wb" vendor="Tridium" vendorVersion="1.0"/>
+  <dependency name="alarm-ux" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="mobile-ux" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="rdb-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="entityIo-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="history-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="basicDriver-rt" vendor="Tridium" vendorVersion="4.6"/>
+ </dependencies>
+ <dirs/>
+ <types>
+  <type class="com.victorsmolinski.DanboiseControls.se.services.BSysBuilderService" name="SysBuilderService"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.jobs.BSinglePRNJob" name="SinglePRNJob"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.jobs.BSingleDMOJob" name="SingleDMOJob"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.jobs.BSingleDDLJob" name="SingleDDLJob"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.workers.BSysBuilderWorker" name="SysBuilderWorker"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.workers.BAlarmBuilderWorker" name="AlarmBuilderWorker"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.workers.BTagBuilderWorker" name="TagBuilderWorker"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.builders.BPRNBuilder" name="PRNBuilder"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.builders.BTagBuilder" name="TagBuilder"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.builders.BAlarmBuilder" name="AlarmBuilder"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.builders.BDMOBuilder" name="DMOBuilder"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.builders.BDDLBuilder" name="DDLBuilder"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.models.builder_rules.BTagRule" name="TagRule"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.models.builder_rules.BFilter" name="Filter"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.models.builder_rules.BFilterGroup" name="FilterGroup"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.models.n2.BJciN2BoolPoint" name="JciN2BoolPoint"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.models.n2.BJciN2BoolWritable" name="JciN2BoolWritable"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.models.n2.BJciN2EnumPoint" name="JciN2EnumPoint"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.models.n2.BJciN2EnumWritable" name="JciN2EnumWritable"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.models.n2.BJciN2NumPoint" name="JciN2NumPoint"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.models.n2.BJciN2NumWritable" name="JciN2NumWritable"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.models.enums.BAlarmClassEnum" name="AlarmClassEnum"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.models.enums.BAlarmTypeEnum" name="AlarmTypeEnum"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.utils.alarms.BAlarmMaker" name="AlarmMaker"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.utils.alarms.BAlarmUtil" name="AlarmUtil"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.utils.alarms.BFireAlmMaker" name="FireAlmMaker"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.utils.alarms.BHiTempAlmMaker" name="HiTempAlmMaker"/>
+ </types>
+ <permissions>
+  <niagara-permission-groups type="all"/>
+  <niagara-permission-groups type="workbench"/>
+  <niagara-permission-groups type="station">
+   <req-permission>
+    <name>NETWORK_COMMUNICATION</name>
+    <purposeKey>Smolinski.</purposeKey>
+    <parameters>
+     <parameter name="hosts" value="*"/>
+     <parameter name="ports" value="*"/>
+     <parameter name="type" value="all"/>
+    </parameters>
+   </req-permission>
+   <req-permission>
+    <name>MANAGE_EXECUTION</name>
+    <purposeKey>Smolinski</purposeKey>
+   </req-permission>
+   <req-permission>
+    <name>SHUTDOWN_HOOKS</name>
+    <purposeKey>Smolinski</purposeKey>
+   </req-permission>
+   <req-permission>
+    <name>LOGGING</name>
+    <purposeKey>Smolinski</purposeKey>
+   </req-permission>
+   <req-permission>
+    <name>MODIFY_IO_STREAMS</name>
+    <purposeKey>Smolinski</purposeKey>
+   </req-permission>
+   <req-permission>
+    <name>SYSTEM_PROPERTIES</name>
+    <purposeKey>Smolinski</purposeKey>
+    <parameters>
+     <parameter name="properties" value="*"/>
+     <parameter name="actions" value="read,write"/>
+    </parameters>
+   </req-permission>
+   <req-permission>
+    <name>SET_SYSTEM_TIME</name>
+    <purposeKey>Smolinski</purposeKey>
+   </req-permission>
+   <req-permission>
+    <name>LOAD_LIBRARIES</name>
+    <purposeKey>Smolinski</purposeKey>
+    <parameters>
+     <parameter name="libraries" value="*"/>
+    </parameters>
+   </req-permission>
+   <req-permission>
+    <name>AUTHENTICATION</name>
+    <purposeKey>Smolinski</purposeKey>
+   </req-permission>
+   <req-permission>
+    <name>GET_ENVIRONMENT_VARIABLES</name>
+    <purposeKey>Smolinski</purposeKey>
+    <parameters>
+     <parameter name="variables" value="NIAGARA_HOME,NIAGARA_USER_HOME,NIAGARA_DEV_HOME,GRADLE_HOME,JAVA_HOME,MAVEN_HOME,TEMP,TMP,WINDIR,PATH,CLASSPATH,COMSPEC,PATH,USERNAME,LOGONSERVER,USERDOMAIN,USERNAME,USERPROFILE,HOMEPATH,HOMEDRIVE,APPDATA,LOCALAPPDATA,CLIENTNAME"/>
+    </parameters>
+   </req-permission>
+   <req-permission>
+    <name>REFLECTION</name>
+    <purposeKey>Smolinski</purposeKey>
+   </req-permission>
+   <req-permission>
+    <name>UI</name>
+    <purposeKey>Smolinski</purposeKey>
+   </req-permission>
+   <req-permission>
+    <name>RUNTIME_EXECUTION</name>
+    <purposeKey>Smolinski</purposeKey>
+    <parameters>
+     <parameter name="files" value="*"/>
+    </parameters>
+   </req-permission>
+  </niagara-permission-groups>
+ </permissions>
+</module>

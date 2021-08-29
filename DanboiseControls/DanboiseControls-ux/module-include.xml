@@ -1,11 +1,8 @@
 <!-- Module Include File -->
+
 <!-- Types -->
 <types>
-  <!-- Type Example:<type name="MyClass" class="com.acme.BMyClass"/> -->
-  <!--com.danboisemechanical.DanboiseControls.ux-->
-  <type class="com.danboisemechanical.DanboiseControls.ux.BFloorplanZone" name="FloorplanZone">
-    <agent>
-      <on type="driver:Device"/>
-    </agent>
-  </type>
+  <!-- Type Example:
+  <type name="MyClass" class="com.acme.BMyClass"/>
+  -->
 </types>

@@ -1,5 +1,5 @@
 /*
-  Copyright 2019 DanboiseMechanical, All Rights Reserved.
+  Copyright 2021 VictorSmolinski, All Rights Reserved.
  */
 apply plugin: 'java'
 apply plugin: 'com.tridium.niagara'

@@ -10,9 +10,9 @@
     <!--<name>NETWORK_COMMUNICATION</name>-->
     <!--<purposeKey>Outside access for Driver</purposeKey>-->
     <!--<parameters>-->
-      <!--<parameter name="hosts" value="127.0.0.1"/>-->
-      <!--<parameter name="ports" value="*"/>-->
-      <!--<parameter name="type" value="all"/>-->
+    <!--<parameter name="hosts" value="127.0.0.1"/>-->
+    <!--<parameter name="ports" value="*"/>-->
+    <!--<parameter name="type" value="all"/>-->
     <!--</parameters>-->
     <!--</req-permission>-->
   </niagara-permission-groups>

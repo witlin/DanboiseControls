@@ -1,13 +1,10 @@
 *.idea/
+*.settings/
+*.classpath
 *.class
 *.bin
-*.jar
 *.properties
 *.lock
-*.xml
-*.png
 *.plantuml
-*.MF
 *.txt
-gradlew
-gradlew.bat
+*.project

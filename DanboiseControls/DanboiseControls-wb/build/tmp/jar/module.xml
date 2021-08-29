@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="DanboiseControls-wb" bajaVersion="0" vendor="VictorSmolinski" vendorVersion="1.0" description="" preferredSymbol="dc" nre="true" autoload="true" installable="true" buildMillis="1630271572525" buildHost="David-PC" moduleName="DanboiseControls" runtimeProfile="wb">
+ <dependencies>
+  <dependency name="migration-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="serial-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="schedule-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="baja" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="email-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="net-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="platSerial-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="hierarchy-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="control-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="dashboard-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="gx-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="neql-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="file-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="alarm-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="report-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="web-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="snmp-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="box-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="event-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="DanboiseControls-rt" vendor="VictorSmolinski" vendorVersion="1.0"/>
+  <dependency name="driver-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="abstractMqttDriver-rt" vendor="Tridium" vendorVersion="1.0"/>
+  <dependency name="saml-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="seriesTransform-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="sms-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="bql-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="bajaux-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="tls-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="search-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="rdb-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="entityIo-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="history-rt" vendor="Tridium" vendorVersion="4.6"/>
+  <dependency name="ndriver-rt" vendor="Tridium" vendorVersion="4.6"/>
+ </dependencies>
+ <dirs/>
+ <types/>
+ <permissions>
+  <niagara-permission-groups type="all"/>
+  <niagara-permission-groups type="workbench"/>
+  <niagara-permission-groups type="station"/>
+ </permissions>
+</module>

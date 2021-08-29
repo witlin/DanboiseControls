@@ -2,8 +2,13 @@
 
 def pass = 'Danboise_1'
 def storeName = 'dc-cert.jks'
-def alias = 'dc-cert'
+def alias = 'dmi-cert'
 def jarName = project.name
+
+//def certPath = 'C:\\Users\\David\\Niagara4.6\\distech\\certManagement'
+//def storePath = 'C:\\Users\\David\\Niagara4.6\\distech\\certManagement'
+//def jarPath = 'c:\\niagara\\ec-net4-4.6.96.28\\modules'
+
 def certPath = 'C:\\Users\\David\\Niagara4.6\\tridium\\certManagement'
 def storePath = 'C:\\Users\\David\\Niagara4.6\\tridium\\certManagement'
 def jarPath = 'C:\\JCI\\FXWorkbench-14.6\\modules'
@@ -16,32 +21,32 @@ task signJar(type:Exec){
             alias
 }
 
-/*task runStation(type:Exec){
-  workingDir = '../../../../../../../../JCI/FXWorkbench-14.6/bin'
-  commandLine 'station', station
-  ignoreExitValue = true
-}
+//task runStation(type:Exec){
+//  workingDir = '../../../../../../../../JCI/FXWorkbench-14.6/bin'
+//  commandLine 'station', station
+//  ignoreExitValue = true
+//}
 
-task makeKeystore(type:Exec){
-  workingDir '../../../../../../../../JCI/FXWorkbench-14.6/jre/bin'
-  commandLine 'keytool',
-          '-genkey',
-          '-alias', alias,
-          '-keyAlg', 'RSA',
-          '-ext', 'EKU=\"codeSigning\"',
-          '-validity', '600',
-          '-keypass', pass,
-          '-storepass', pass,
-          '-keystore', storePath.concat('\\'+storeName),
-          '-dname', 'CN=Victor Smolinski, OU=Controls, O=Danboise Controls, L=Farmington, ST=Michigan, C=US'
-}
+//task makeKeystore(type:Exec){
+////  workingDir '../../../../../../../../JCI/FXWorkbench-14.6/jre/bin'
+////  commandLine 'keytool',
+////          '-genkey',
+////          '-alias', alias,
+////          '-keyAlg', 'RSA',
+////          '-ext', 'EKU=\"codeSigning\"',
+////          '-validity', '600',
+////          '-keypass', pass,
+////          '-storepass', pass,
+////          '-keystore', storePath.concat('\\'+storeName),
+////          '-dname', 'CN=Vitek, OU=Controls, O=Danboise Mechanical, L=Farmington, ST=Michigan, C=US'
+////}
 
-task exportCert(type:Exec){
-  workingDir '../../../../../../../../JCI/FXWorkbench-14.6/jre/bin'
-  commandLine 'keytool',
-          '-export',
-          '-keystore', storePath.concat('\\'+storeName),
-          '-alias', alias,
-          '-file', certPath+'\\'+alias+'.cer',
-          '-rfc'
-}*/
+//task exportCert(type:Exec){
+//  workingDir '../../../../../../../../JCI/FXWorkbench-14.6/jre/bin'
+//  commandLine 'keytool',
+//          '-export',
+//          '-keystore', storePath.concat('\\'+storeName),
+//          '-alias', alias,
+//          '-file', certPath+'\\'+alias+'.cer',
+//          '-rfc'
+//}

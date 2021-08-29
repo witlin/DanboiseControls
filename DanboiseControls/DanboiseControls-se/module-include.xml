@@ -2,43 +2,39 @@
 <!-- Types -->
 <types>
   <!-- Type Example:<type name="MyClass" class="com.acme.BMyClass"/> -->
-  <!--com.danboisemechanical.DanboiseControls.se.services-->
-  <type class="com.danboisemechanical.DanboiseControls.se.services.BSysBuilderService" name="SysBuilderService"/>
-  <!--com.danboisemechanical.DanboiseControls.se.jobs-->
-  <type class="com.danboisemechanical.DanboiseControls.se.jobs.BSinglePRNJob" name="SinglePRNJob"/>
-  <type class="com.danboisemechanical.DanboiseControls.se.jobs.BSingleDMOJob" name="SingleDMOJob"/>
-  <type class="com.danboisemechanical.DanboiseControls.se.jobs.BSingleDDLJob" name="SingleDDLJob"/>
-  <!--com.danboisemechanical.DanboiseControls.se.workers-->
-  <type class="com.danboisemechanical.DanboiseControls.se.workers.BSysBuilderWorker" name="SysBuilderWorker"/>
-  <type class="com.danboisemechanical.DanboiseControls.se.workers.BAlarmBuilderWorker" name="AlarmBuilderWorker"/>
-  <type class="com.danboisemechanical.DanboiseControls.se.workers.BTagBuilderWorker" name="TagBuilderWorker"/>
-  <!--com.danboisemechanical.DanboiseControls.se.alarms.algorithms-->
-  <type class="com.danboisemechanical.DanboiseControls.se.alarms.algorithms.BSetpointErrorAlgorithm" name="SetpointErrorAlgorithm"/>
-  <!--com.danboisemechanical.DanboiseControls.se.alarms-->
-  <type class="com.danboisemechanical.DanboiseControls.se.alarms.BSetpointErrorAlarmExt" name="SetpointErrorAlarmExt"/>
-  <!--com.danboisemechanical.DanboiseControls.se.models.enums-->
-  <type class="com.danboisemechanical.DanboiseControls.se.models.enums.BAlarmClassEnum" name="AlarmClassEnum"/>
-  <type class="com.danboisemechanical.DanboiseControls.se.models.enums.BAlarmTypeEnum" name="AlarmTypeEnum"/>
-  <!--com.danboisemechanical.DanboiseControls.se.builders-->
-  <type class="com.danboisemechanical.DanboiseControls.se.builders.BPRNBuilder" name="PRNBuilder"/>
-  <type class="com.danboisemechanical.DanboiseControls.se.builders.BTagBuilder" name="TagBuilder"/>
-  <type class="com.danboisemechanical.DanboiseControls.se.builders.BAlarmBuilder" name="AlarmBuilder"/>
-  <type class="com.danboisemechanical.DanboiseControls.se.builders.BDMOBuilder" name="DMOBuilder"/>
-  <type class="com.danboisemechanical.DanboiseControls.se.builders.BDDLBuilder" name="DDLBuilder"/>
-  <!--com.danboisemechanical.DanboiseControls.se.models.builder_rules-->
-  <type class="com.danboisemechanical.DanboiseControls.se.models.builder_rules.BTagRule" name="TagRule"/>
-  <type class="com.danboisemechanical.DanboiseControls.se.models.builder_rules.BFilter" name="Filter"/>
-  <type class="com.danboisemechanical.DanboiseControls.se.models.builder_rules.BFilterGroup" name="FilterGroup"/>
-  <!--com.danboisemechanical.DanboiseControls.se.utils.alarms-->
-  <type class="com.danboisemechanical.DanboiseControls.se.utils.alarms.BAlarmMaker" name="AlarmMaker"/>
-  <type class="com.danboisemechanical.DanboiseControls.se.utils.alarms.BAlarmUtil" name="AlarmUtil"/>
-  <type class="com.danboisemechanical.DanboiseControls.se.utils.alarms.BFireAlmMaker" name="FireAlmMaker"/>
-  <type class="com.danboisemechanical.DanboiseControls.se.utils.alarms.BHiTempAlmMaker" name="HiTempAlmMaker"/>
-  <!--com.danboisemechanical.DanboiseControls.se.models.n2-->
-  <type class="com.danboisemechanical.DanboiseControls.se.models.n2.BJciN2BoolPoint" name="JciN2BoolPoint"/>
-  <type class="com.danboisemechanical.DanboiseControls.se.models.n2.BJciN2BoolWritable" name="JciN2BoolWritable"/>
-  <type class="com.danboisemechanical.DanboiseControls.se.models.n2.BJciN2EnumPoint" name="JciN2EnumPoint"/>
-  <type class="com.danboisemechanical.DanboiseControls.se.models.n2.BJciN2EnumWritable" name="JciN2EnumWritable"/>
-  <type class="com.danboisemechanical.DanboiseControls.se.models.n2.BJciN2NumPoint" name="JciN2NumPoint"/>
-  <type class="com.danboisemechanical.DanboiseControls.se.models.n2.BJciN2NumWritable" name="JciN2NumWritable"/>
+  <!--com.victorsmolinski.DanboiseControls.se.services-->
+  <type class="com.victorsmolinski.DanboiseControls.se.services.BSysBuilderService" name="SysBuilderService"/>
+  <!--com.victorsmolinski.DanboiseControls.se.jobs-->
+  <type class="com.victorsmolinski.DanboiseControls.se.jobs.BSinglePRNJob" name="SinglePRNJob"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.jobs.BSingleDMOJob" name="SingleDMOJob"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.jobs.BSingleDDLJob" name="SingleDDLJob"/>
+  <!--com.victorsmolinski.DanboiseControls.se.workers-->
+  <type class="com.victorsmolinski.DanboiseControls.se.workers.BSysBuilderWorker" name="SysBuilderWorker"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.workers.BAlarmBuilderWorker" name="AlarmBuilderWorker"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.workers.BTagBuilderWorker" name="TagBuilderWorker"/>
+  <!--com.victorsmolinski.DanboiseControls.se.builders-->
+  <type class="com.victorsmolinski.DanboiseControls.se.builders.BPRNBuilder" name="PRNBuilder"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.builders.BTagBuilder" name="TagBuilder"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.builders.BAlarmBuilder" name="AlarmBuilder"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.builders.BDMOBuilder" name="DMOBuilder"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.builders.BDDLBuilder" name="DDLBuilder"/>
+  <!--com.victorsmolinski.DanboiseControls.se.models.builder_rules-->
+  <type class="com.victorsmolinski.DanboiseControls.se.models.builder_rules.BTagRule" name="TagRule"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.models.builder_rules.BFilter" name="Filter"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.models.builder_rules.BFilterGroup" name="FilterGroup"/>
+  <!--com.victorsmolinski.DanboiseControls.se.models.n2-->
+  <type class="com.victorsmolinski.DanboiseControls.se.models.n2.BJciN2BoolPoint" name="JciN2BoolPoint"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.models.n2.BJciN2BoolWritable" name="JciN2BoolWritable"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.models.n2.BJciN2EnumPoint" name="JciN2EnumPoint"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.models.n2.BJciN2EnumWritable" name="JciN2EnumWritable"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.models.n2.BJciN2NumPoint" name="JciN2NumPoint"/>
+  <type class="com.victorsmolinski.DanboiseControls.se.models.n2.BJciN2NumWritable" name="JciN2NumWritable"/>
+    <!--com.victorsmolinski.DanboiseControls.se.models.enums-->
+    <type class="com.victorsmolinski.DanboiseControls.se.models.enums.BAlarmClassEnum" name="AlarmClassEnum"/>
+    <type class="com.victorsmolinski.DanboiseControls.se.models.enums.BAlarmTypeEnum" name="AlarmTypeEnum"/>
+    <!--com.victorsmolinski.DanboiseControls.se.utils.alarms-->
+    <type class="com.victorsmolinski.DanboiseControls.se.utils.alarms.BAlarmMaker" name="AlarmMaker"/>
+    <type class="com.victorsmolinski.DanboiseControls.se.utils.alarms.BAlarmUtil" name="AlarmUtil"/>
+    <type class="com.victorsmolinski.DanboiseControls.se.utils.alarms.BFireAlmMaker" name="FireAlmMaker"/>
+    <type class="com.victorsmolinski.DanboiseControls.se.utils.alarms.BHiTempAlmMaker" name="HiTempAlmMaker"/>
 </types>
