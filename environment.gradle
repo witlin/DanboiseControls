@@ -11,6 +11,10 @@
 //gradle.ext.niagara_home = "c:/niagara/ec-net4-4.6.96.28"
 //gradle.ext.niagara_user_home = "C:/Users/David/Niagara4.6/distech"
 
-gradle.ext.niagara_dev_home = "c:/Users/David/git/DanboiseControls"
-gradle.ext.niagara_home = "c:/JCI/FXWorkbench-14.6"
-gradle.ext.niagara_user_home = "c:/Users/David/Niagara4.6/tridium"
+//gradle.ext.niagara_dev_home = "c:/Users/David/git/DanboiseControls"
+//gradle.ext.niagara_home = "c:/JCI/FXWorkbench-14.6"
+//gradle.ext.niagara_user_home = "c:/Users/David/Niagara4.6/tridium"
+
+gradle.ext.niagara_dev_home = "C:/Users/vms03/git/DanboiseControls"
+gradle.ext.niagara_home = "C:/Niagara/EC-Net4-4.7.110.32"
+gradle.ext.niagara_user_home = "C:/Users/vms03/Niagara4.6/distech"
